@@ -6,7 +6,7 @@ valorant.load_data()
 
 @app.route('/teams')
 def get_teams():
-    return jsonify(valorant.STATIC_DAT["tier1"])
+    return jsonify(valorant.STATIC_DAT["tier1"]["teams"])
 
 @app.route('/team/<id>')
 def get_team(id):
