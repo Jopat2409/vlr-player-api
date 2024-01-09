@@ -1,14 +1,22 @@
 from __future__ import annotations
-import json
 import requests
+import json
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 STATIC_DAT = {}
+options = Options()
+# options.add_argument('--headless=new')
+__driver = webdriver.Chrome(options=options)
 
-def load_data():
+
+def init():
     global STATIC_DAT
     with open("data.json", "r") as f:
         STATIC_DAT = json.load(f)
+
 
 
 def get_teams() -> dict:
@@ -17,7 +25,40 @@ def get_teams() -> dict:
 def team_from_id(id: int) -> dict:
     return next(team for team in get_teams() if int(team["id"]) == id)
 
-def players_from_team(id: int) -> list:
+def get_players() -> list:
+    return [player for team in get_teams() for player in team["players"]]
+
+def player_from_id(id: int) -> dict:
+    #TODO: Add id field to player also why is it url in player but vlr-url in team
+    return next(player for player in get_players() if str(id) in player["url"])
+
+def __scrape_player_data(id: int) -> dict:
+    __driver.get(player_from_id(id)["url"])
+    # get rid of retarded cookie popup
+    __driver.find_elements(By.CLASS_NAME, 'ncmp__btn')[1].click()
+    # go to the match history
+    __driver.find_elements(By.CLASS_NAME, "wf-nav-item")[1].click()
+
+    current_match = 0
+    while(current_match < 10):
+        matches = __driver.find_element(By.CLASS_NAME, "mod-dark").find_elements(By.CLASS_NAME, 'wf-card')
+        matches[current_match].click()
+
+        match_date = __driver.find_elements(By.CLASS_NAME, 'moment-tz-convert')[0].text
+        print(f"Found match: {__driver.find_element(By.CLASS_NAME, 'match-header-event-series').text} on {match_date}")
+
+        __driver.back()
+        current_match += 1
+    return {
+        "kills": 0,
+        "deaths": 0,
+        "assists": 0,
+        "first-kills": 0,
+        "first-deaths": 0
+    }
+
+
+def __scrape_players_from_team(id: int) -> list:
     """ Returns in dictionary form
     [
     {
@@ -64,20 +105,20 @@ def player_stats_from_id(id: int) -> dict:
         first-deaths
     }
     """
-    pass
+    return {"data": player_from_id(id), "stats": __scrape_player_data(id)}
 
 
 def __scrape_all_data():
     print("Scraping team data for all VCT partnered teams")
-    load_data()
+    init()
     for i, team in enumerate(get_teams()):
-        STATIC_DAT["tier1"]["teams"][i].update({"players": players_from_team(int(team["id"]))})
+        STATIC_DAT["tier1"]["teams"][i].update({"players": __scrape_players_from_team(int(team["id"]))})
     with open("data.json", "w", encoding='utf-8') as f:
         json.dump(STATIC_DAT, f, indent=2)
 
 
 if __name__ == "__main__":
-    _inp = int(input("1. Run Tests\n2. Re-scrape Data\n>>>"))
+    _inp = int(input("1. Run Tests\n2. Re-scrape Data\n>>> "))
     if _inp == 1:
         pass
     if _inp == 2:
