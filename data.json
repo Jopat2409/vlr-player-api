@@ -1,87 +1,610 @@
 {
-    "tier1" : {
-        "teams": [
-            {
-                "display-name": "100 Thieves",
-                "id": 120,
-                "region": "NA",
-                "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
-                "display-tag": "100T"
-            },
-            {
-                "display-name": "Cloud9",
-                "id": 188,
-                "region": "NA",
-                "vlr-url": "https://www.vlr.gg/team/188/cloud9",
-                "display-tag": "C9"
-            },
-            {
-                "display-name": "Evil Geniuses",
-                "id": 5248,
-                "region": "NA",
-                "vlr-url": "https://www.vlr.gg/team/5248/evil-geniuses",
-                "display-tag": "EG"
-            },
-            {
-                "display-name": "Furia",
-                "id": 120,
-                "region": "NA",
-                "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
-                "display-tag": "FURIA"
-            },
-            {
-                "display-name": "KRÜ Esports",
-                "id": 120,
-                "region": "NA",
-                "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
-                "display-tag": "KRU"
-            },
-            {
-                "display-name": "Leviatán",
-                "id": 120,
-                "region": "NA",
-                "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
-                "display-tag": "LEV"
-            },
-            {
-                "display-name": "LOUD",
-                "id": 120,
-                "region": "NA",
-                "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
-                "display-tag": "LOUD"
-            },
-            {
-                "display-name": "MIBR",
-                "id": 120,
-                "region": "NA",
-                "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
-                "display-tag": "MIBR"
-            },
-            {
-                "display-name": "NRG Esports",
-                "id": 120,
-                "region": "NA",
-                "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
-                "display-tag": "NRG"
-            },
-            {
-                "display-name": "Sentinels",
-                "id": 120,
-                "region": "NA",
-                "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
-                "display-tag": "SEN"
-            },
-            {
-                "display-name": "G2 Esports",
-                "id": 120,
-                "region": "NA",
-                "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
-                "display-tag": "G2"
-            }
-        ],
-        "players": [
-
-        ]
-    }
-
+  "tier1": {
+    "teams": [
+      {
+        "display-name": "100 Thieves",
+        "id": 120,
+        "region": "NA",
+        "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
+        "display-tag": "100T"
+      },
+      {
+        "display-name": "Cloud9",
+        "id": 188,
+        "region": "NA",
+        "vlr-url": "https://www.vlr.gg/team/188/cloud9",
+        "display-tag": "C9"
+      },
+      {
+        "display-name": "Evil Geniuses",
+        "id": 5248,
+        "region": "NA",
+        "vlr-url": "https://www.vlr.gg/team/5248/evil-geniuses",
+        "display-tag": "EG"
+      },
+      {
+        "display-name": "Furia",
+        "id": 2406,
+        "region": "NA",
+        "vlr-url": "https://www.vlr.gg/team/2406/100-thieves",
+        "display-tag": "FURIA"
+      },
+      {
+        "display-name": "KR\u00c3\u0153 Esports",
+        "id": 2355,
+        "region": "NA",
+        "vlr-url": "https://www.vlr.gg/team/2355/100-thieves",
+        "display-tag": "KRU"
+      },
+      {
+        "display-name": "Leviat\u00c3\u00a1n",
+        "id": 2359,
+        "region": "NA",
+        "vlr-url": "https://www.vlr.gg/team/2359/100-thieves",
+        "display-tag": "LEV"
+      },
+      {
+        "display-name": "LOUD",
+        "id": 6961,
+        "region": "NA",
+        "vlr-url": "https://www.vlr.gg/team/6961/100-thieves",
+        "display-tag": "LOUD"
+      },
+      {
+        "display-name": "MIBR",
+        "id": 7386,
+        "region": "NA",
+        "vlr-url": "https://www.vlr.gg/team/7386/100-thieves",
+        "display-tag": "MIBR"
+      },
+      {
+        "display-name": "NRG Esports",
+        "id": 1034,
+        "region": "NA",
+        "vlr-url": "https://www.vlr.gg/team/1034/100-thieves",
+        "display-tag": "NRG"
+      },
+      {
+        "display-name": "Sentinels",
+        "id": 2,
+        "region": "NA",
+        "vlr-url": "https://www.vlr.gg/team/2/100-thieves",
+        "display-tag": "SEN"
+      },
+      {
+        "display-name": "G2 Esports",
+        "id": 11058,
+        "region": "NA",
+        "vlr-url": "https://www.vlr.gg/team/11058/100-thieves",
+        "display-tag": "G2"
+      }
+    ],
+    "players": [
+      {
+        "display-name": "Boostio",
+        "real-name": "Kelden Pupello",
+        "team": "100T",
+        "team-id": 120,
+        "url": "https://www.vlr.gg/player/604/boostio"
+      },
+      {
+        "display-name": "bang",
+        "real-name": "Sean Bezerra",
+        "team": "100T",
+        "team-id": 120,
+        "url": "https://www.vlr.gg/player/3880/bang"
+      },
+      {
+        "display-name": "Cryocells",
+        "real-name": "Matthew Panganiban",
+        "team": "100T",
+        "team-id": 120,
+        "url": "https://www.vlr.gg/player/4147/cryocells"
+      },
+      {
+        "display-name": "eeiu",
+        "real-name": "Daniel Vucenovic",
+        "team": "100T",
+        "team-id": 120,
+        "url": "https://www.vlr.gg/player/796/eeiu"
+      },
+      {
+        "display-name": "Asuna",
+        "real-name": "Peter Mazuryk",
+        "team": "100T",
+        "team-id": 120,
+        "url": "https://www.vlr.gg/player/601/asuna"
+      },
+      {
+        "display-name": "Zikz",
+        "real-name": "Anthony Gray",
+        "team": "100T",
+        "team-id": 120,
+        "url": "https://www.vlr.gg/player/26482/zikz"
+      },
+      {
+        "display-name": "Mikes",
+        "real-name": "Michael Hockom",
+        "team": "100T",
+        "team-id": 120,
+        "url": "https://www.vlr.gg/player/19343/mikes"
+      },
+      {
+        "display-name": "vanity",
+        "real-name": "Anthony Malaspina",
+        "team": "C9",
+        "team-id": 188,
+        "url": "https://www.vlr.gg/player/7870/vanity"
+      },
+      {
+        "display-name": "Xeppaa",
+        "real-name": "Erick Bach",
+        "team": "C9",
+        "team-id": 188,
+        "url": "https://www.vlr.gg/player/7871/xeppaa"
+      },
+      {
+        "display-name": "jakee",
+        "real-name": "Jake Anderson",
+        "team": "C9",
+        "team-id": 188,
+        "url": "https://www.vlr.gg/player/8742/jakee"
+      },
+      {
+        "display-name": "OXY",
+        "real-name": "Francis Hoang",
+        "team": "C9",
+        "team-id": 188,
+        "url": "https://www.vlr.gg/player/18796/oxy"
+      },
+      {
+        "display-name": "wippie",
+        "real-name": "Maxim Shepelev",
+        "team": "C9",
+        "team-id": 188,
+        "url": "https://www.vlr.gg/player/4373/wippie"
+      },
+      {
+        "display-name": "Immi",
+        "real-name": "Ian Harding",
+        "team": "C9",
+        "team-id": 188,
+        "url": "https://www.vlr.gg/player/9815/immi"
+      },
+      {
+        "display-name": "jawgemo",
+        "real-name": "Alexander Mor",
+        "team": "EG",
+        "team-id": 5248,
+        "url": "https://www.vlr.gg/player/3993/jawgemo"
+      },
+      {
+        "display-name": "potter",
+        "real-name": "Christine Chi",
+        "team": "EG",
+        "team-id": 5248,
+        "url": "https://www.vlr.gg/player/3104/potter"
+      },
+      {
+        "display-name": "kon4n",
+        "real-name": "Vitor Hugo",
+        "team": "FURIA",
+        "team-id": 2406,
+        "url": "https://www.vlr.gg/player/1671/kon4n"
+      },
+      {
+        "display-name": "mwzera",
+        "real-name": "Leonardo Serrati",
+        "team": "FURIA",
+        "team-id": 2406,
+        "url": "https://www.vlr.gg/player/939/mwzera"
+      },
+      {
+        "display-name": "liazzi",
+        "real-name": "Felipe Galiazzi",
+        "team": "FURIA",
+        "team-id": 2406,
+        "url": "https://www.vlr.gg/player/2567/liazzi"
+      },
+      {
+        "display-name": "havoc",
+        "real-name": "Ilan Eloy",
+        "team": "FURIA",
+        "team-id": 2406,
+        "url": "https://www.vlr.gg/player/8706/havoc"
+      },
+      {
+        "display-name": "Khalil",
+        "real-name": "Khalil Schmidt",
+        "team": "FURIA",
+        "team-id": 2406,
+        "url": "https://www.vlr.gg/player/1711/khalil"
+      },
+      {
+        "display-name": "Koy",
+        "real-name": "Pedro Pulig",
+        "team": "FURIA",
+        "team-id": 2406,
+        "url": "https://www.vlr.gg/player/8469/koy"
+      },
+      {
+        "display-name": "Melser",
+        "real-name": "Marco Eliot Machuca Amaro",
+        "team": "KRU",
+        "team-id": 2355,
+        "url": "https://www.vlr.gg/player/1311/melser"
+      },
+      {
+        "display-name": "keznit",
+        "real-name": "Angelo Mori",
+        "team": "KRU",
+        "team-id": 2355,
+        "url": "https://www.vlr.gg/player/2462/keznit"
+      },
+      {
+        "display-name": "Klaus",
+        "real-name": "Nicolas Ferrari",
+        "team": "KRU",
+        "team-id": 2355,
+        "url": "https://www.vlr.gg/player/2610/klaus"
+      },
+      {
+        "display-name": "mta",
+        "real-name": "Nicol\u00e1s Gonz\u00e1lez",
+        "team": "KRU",
+        "team-id": 2355,
+        "url": "https://www.vlr.gg/player/36169/mta"
+      },
+      {
+        "display-name": "Shyy",
+        "real-name": "Fabian Usnayo",
+        "team": "KRU",
+        "team-id": 2355,
+        "url": "https://www.vlr.gg/player/24007/shyy"
+      },
+      {
+        "display-name": "Atom",
+        "real-name": "Jorge Siero",
+        "team": "KRU",
+        "team-id": 2355,
+        "url": "https://www.vlr.gg/player/12871/atom"
+      },
+      {
+        "display-name": "ddx",
+        "real-name": "Alan Salvati",
+        "team": "KRU",
+        "team-id": 2355,
+        "url": "https://www.vlr.gg/player/11215/ddx"
+      },
+      {
+        "display-name": "Nyogen",
+        "real-name": "Tom\u00e1s Castiglione",
+        "team": "KRU",
+        "team-id": 2355,
+        "url": "https://www.vlr.gg/player/2476/nyogen"
+      },
+      {
+        "display-name": "tex",
+        "real-name": "Ian Botsch",
+        "team": "LEV",
+        "team-id": 2359,
+        "url": "https://www.vlr.gg/player/1818/tex"
+      },
+      {
+        "display-name": "kiNgg",
+        "real-name": "Francisco Aravena",
+        "team": "LEV",
+        "team-id": 2359,
+        "url": "https://www.vlr.gg/player/8549/kingg"
+      },
+      {
+        "display-name": "Mazino",
+        "real-name": "Roberto Rivas",
+        "team": "LEV",
+        "team-id": 2359,
+        "url": "https://www.vlr.gg/player/7603/mazino"
+      },
+      {
+        "display-name": "aspas",
+        "real-name": "Erick Santos",
+        "team": "LEV",
+        "team-id": 2359,
+        "url": "https://www.vlr.gg/player/8480/aspas"
+      },
+      {
+        "display-name": "nzr",
+        "real-name": "Agustin Ibarra",
+        "team": "LEV",
+        "team-id": 2359,
+        "url": "https://www.vlr.gg/player/725/nzr"
+      },
+      {
+        "display-name": "goked",
+        "real-name": "Alex Kie",
+        "team": "LEV",
+        "team-id": 2359,
+        "url": "https://www.vlr.gg/player/3055/goked"
+      },
+      {
+        "display-name": "Itopata",
+        "real-name": "Dimitar Staev",
+        "team": "LEV",
+        "team-id": 2359,
+        "url": "https://www.vlr.gg/player/333/itopata"
+      },
+      {
+        "display-name": "saadhak",
+        "real-name": "Matias Delipetro",
+        "team": "LOUD",
+        "team-id": 6961,
+        "url": "https://www.vlr.gg/player/727/saadhak"
+      },
+      {
+        "display-name": "Quick",
+        "real-name": "Gabriel Lima",
+        "team": "LOUD",
+        "team-id": 6961,
+        "url": "https://www.vlr.gg/player/1575/quick"
+      },
+      {
+        "display-name": "Less",
+        "real-name": "Felipe de Loyola",
+        "team": "LOUD",
+        "team-id": 6961,
+        "url": "https://www.vlr.gg/player/8447/less"
+      },
+      {
+        "display-name": "tuyz",
+        "real-name": "Arthur Andrade",
+        "team": "LOUD",
+        "team-id": 6961,
+        "url": "https://www.vlr.gg/player/2408/tuyz"
+      },
+      {
+        "display-name": "cauanzin",
+        "real-name": "Cauan Pereira",
+        "team": "LOUD",
+        "team-id": 6961,
+        "url": "https://www.vlr.gg/player/6193/cauanzin"
+      },
+      {
+        "display-name": "peu",
+        "real-name": "Pedro Lopes",
+        "team": "LOUD",
+        "team-id": 6961,
+        "url": "https://www.vlr.gg/player/25910/peu"
+      },
+      {
+        "display-name": "stkJ",
+        "real-name": "Jordan Nunes",
+        "team": "LOUD",
+        "team-id": 6961,
+        "url": "https://www.vlr.gg/player/5709/stkj"
+      },
+      {
+        "display-name": "jzz",
+        "real-name": "Jo\u00e3o Pedro",
+        "team": "MIBR",
+        "team-id": 7386,
+        "url": "https://www.vlr.gg/player/13093/jzz"
+      },
+      {
+        "display-name": "Mazin",
+        "real-name": "Matheus Ara\u00fajo",
+        "team": "MIBR",
+        "team-id": 7386,
+        "url": "https://www.vlr.gg/player/8872/mazin"
+      },
+      {
+        "display-name": "artzin",
+        "real-name": "Arthur Araujo",
+        "team": "MIBR",
+        "team-id": 7386,
+        "url": "https://www.vlr.gg/player/5957/artzin"
+      },
+      {
+        "display-name": "RgLMeister",
+        "real-name": "Matheus Rodigoli",
+        "team": "MIBR",
+        "team-id": 7386,
+        "url": "https://www.vlr.gg/player/5351/rglmeister"
+      },
+      {
+        "display-name": "frz",
+        "real-name": "Leandro Gomes",
+        "team": "MIBR",
+        "team-id": 7386,
+        "url": "https://www.vlr.gg/player/651/frz"
+      },
+      {
+        "display-name": "chivitz",
+        "real-name": "Felipe Chivitz",
+        "team": "MIBR",
+        "team-id": 7386,
+        "url": "https://www.vlr.gg/player/32311/chivitz"
+      },
+      {
+        "display-name": "fRoD",
+        "real-name": "Daniel Montaner",
+        "team": "MIBR",
+        "team-id": 7386,
+        "url": "https://www.vlr.gg/player/145/frod"
+      },
+      {
+        "display-name": "bzkA",
+        "real-name": "Matheus Tarasconi",
+        "team": "MIBR",
+        "team-id": 7386,
+        "url": "https://www.vlr.gg/player/940/bzka"
+      },
+      {
+        "display-name": "Iara",
+        "real-name": "Iara Rodrigo",
+        "team": "MIBR",
+        "team-id": 7386,
+        "url": "https://www.vlr.gg/player/2466/iara"
+      },
+      {
+        "display-name": "Ethan",
+        "real-name": "Ethan Arnold",
+        "team": "NRG",
+        "team-id": 1034,
+        "url": "https://www.vlr.gg/player/11225/ethan"
+      },
+      {
+        "display-name": "crashies",
+        "real-name": "Austin Roberts",
+        "team": "NRG",
+        "team-id": 1034,
+        "url": "https://www.vlr.gg/player/4/crashies"
+      },
+      {
+        "display-name": "Victor",
+        "real-name": "Victor Wong",
+        "team": "NRG",
+        "team-id": 1034,
+        "url": "https://www.vlr.gg/player/261/victor"
+      },
+      {
+        "display-name": "Marved",
+        "real-name": "Jimmy Nguyen",
+        "team": "NRG",
+        "team-id": 1034,
+        "url": "https://www.vlr.gg/player/263/marved"
+      },
+      {
+        "display-name": "Demon1",
+        "real-name": "Max Mazanov",
+        "team": "NRG",
+        "team-id": 1034,
+        "url": "https://www.vlr.gg/player/26171/demon1"
+      },
+      {
+        "display-name": "Chet",
+        "real-name": "Chet Singh",
+        "team": "NRG",
+        "team-id": 1034,
+        "url": "https://www.vlr.gg/player/4012/chet"
+      },
+      {
+        "display-name": "johnqt",
+        "real-name": "Mohamed Amine Ouarid",
+        "team": "SEN",
+        "team-id": 2,
+        "url": "https://www.vlr.gg/player/1265/johnqt"
+      },
+      {
+        "display-name": "pANcada",
+        "real-name": "Bryan Luna",
+        "team": "SEN",
+        "team-id": 2,
+        "url": "https://www.vlr.gg/player/683/pancada"
+      },
+      {
+        "display-name": "TenZ",
+        "real-name": "Tyson Ngo",
+        "team": "SEN",
+        "team-id": 2,
+        "url": "https://www.vlr.gg/player/9/tenz"
+      },
+      {
+        "display-name": "zekken",
+        "real-name": "Zachary Patrone",
+        "team": "SEN",
+        "team-id": 2,
+        "url": "https://www.vlr.gg/player/4004/zekken"
+      },
+      {
+        "display-name": "Sacy",
+        "real-name": "Gustavo Rossi",
+        "team": "SEN",
+        "team-id": 2,
+        "url": "https://www.vlr.gg/player/659/sacy"
+      },
+      {
+        "display-name": "Zellsis",
+        "real-name": "Jordan Montemurro",
+        "team": "SEN",
+        "team-id": 2,
+        "url": "https://www.vlr.gg/player/729/zellsis"
+      },
+      {
+        "display-name": "SicK",
+        "real-name": "Hunter Mims",
+        "team": "SEN",
+        "team-id": 2,
+        "url": "https://www.vlr.gg/player/45/sick"
+      },
+      {
+        "display-name": "Kez",
+        "real-name": "Kevin Jeon",
+        "team": "SEN",
+        "team-id": 2,
+        "url": "https://www.vlr.gg/player/19612/kez"
+      },
+      {
+        "display-name": "kaplan",
+        "real-name": "Adam Kaplan",
+        "team": "SEN",
+        "team-id": 2,
+        "url": "https://www.vlr.gg/player/757/kaplan"
+      },
+      {
+        "display-name": "DrewSpark",
+        "real-name": "Drew Spark-Whitworth",
+        "team": "SEN",
+        "team-id": 2,
+        "url": "https://www.vlr.gg/player/26257/drewspark"
+      },
+      {
+        "display-name": "valyn",
+        "real-name": "Jacob Batio",
+        "team": "G2",
+        "team-id": 11058,
+        "url": "https://www.vlr.gg/player/3885/valyn"
+      },
+      {
+        "display-name": "trent",
+        "real-name": "Trent Cairns",
+        "team": "G2",
+        "team-id": 11058,
+        "url": "https://www.vlr.gg/player/15500/trent"
+      },
+      {
+        "display-name": "JonahP",
+        "real-name": "Jonah Pulice",
+        "team": "G2",
+        "team-id": 11058,
+        "url": "https://www.vlr.gg/player/4581/jonahp"
+      },
+      {
+        "display-name": "neT",
+        "real-name": "Michael Bernet",
+        "team": "G2",
+        "team-id": 11058,
+        "url": "https://www.vlr.gg/player/6582/net"
+      },
+      {
+        "display-name": "leaf",
+        "real-name": "Nathan Orf",
+        "team": "G2",
+        "team-id": 11058,
+        "url": "https://www.vlr.gg/player/7873/leaf"
+      },
+      {
+        "display-name": "Seowulf",
+        "real-name": "Myungjun Seo",
+        "team": "G2",
+        "team-id": 11058,
+        "url": "https://www.vlr.gg/player/21327/seowulf"
+      },
+      {
+        "display-name": "JoshRT",
+        "real-name": "Josh Lee",
+        "team": "G2",
+        "team-id": 11058,
+        "url": "https://www.vlr.gg/player/52/joshrt"
+      }
+    ]
+  }
 }
