@@ -5,6 +5,9 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import datetime
 
 STATIC_DAT = {}
 options = Options()
@@ -16,6 +19,13 @@ def init():
     global STATIC_DAT
     with open("data.json", "r") as f:
         STATIC_DAT = json.load(f)
+
+    # get rid of retardewd cookie popup x2
+    __driver.get("https://www.vlr.gg")
+    WebDriverWait(__driver, 20).until(EC.presence_of_element_located((By.CLASS_NAME, 'ncmp__btn')))
+    # get rid of retarded cookie popup
+    __driver.find_elements(By.CLASS_NAME, 'ncmp__btn')[1].click()
+
 
 
 
@@ -32,19 +42,21 @@ def player_from_id(id: int) -> dict:
     #TODO: Add id field to player also why is it url in player but vlr-url in team
     return next(player for player in get_players() if str(id) in player["url"])
 
-def __scrape_player_data(id: int) -> dict:
+def __scrape_player_data(id: int, fromTimestamp: int = int((datetime.datetime.now() - datetime.timedelta(days=60)).timestamp())) -> dict:
     __driver.get(player_from_id(id)["url"])
-    # get rid of retarded cookie popup
-    __driver.find_elements(By.CLASS_NAME, 'ncmp__btn')[1].click()
+
     # go to the match history
     __driver.find_elements(By.CLASS_NAME, "wf-nav-item")[1].click()
 
     current_match = 0
-    while(current_match < 10):
+    while(True):
         matches = __driver.find_element(By.CLASS_NAME, "mod-dark").find_elements(By.CLASS_NAME, 'wf-card')
         matches[current_match].click()
 
-        match_date = __driver.find_elements(By.CLASS_NAME, 'moment-tz-convert')[0].text
+        match_date = __driver.find_elements(By.CLASS_NAME, 'moment-tz-convert')[0].get_attribute('data-utc-ts')
+        match_epoch = datetime.datetime.strptime(match_date, '%Y-%m-%d %H:%M:%S').timestamp()
+        if match_epoch < fromTimestamp: break
+        # if match
         print(f"Found match: {__driver.find_element(By.CLASS_NAME, 'match-header-event-series').text} on {match_date}")
 
         __driver.back()
