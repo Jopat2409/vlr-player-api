@@ -1,0 +1,82 @@
+{
+    "tier1" : [
+        {
+            "display-name": "100 Thieves",
+            "id": 120,
+            "region": "NA",
+            "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
+            "display-tag": "100T"
+        },
+        {
+            "display-name": "Cloud9",
+            "id": 188,
+            "region": "NA",
+            "vlr-url": "https://www.vlr.gg/team/188/cloud9",
+            "display-tag": "C9"
+        },
+        {
+            "display-name": "Evil Geniuses",
+            "id": 5248,
+            "region": "NA",
+            "vlr-url": "https://www.vlr.gg/team/5248/evil-geniuses",
+            "display-tag": "EG"
+        },
+        {
+            "display-name": "Furia",
+            "id": 120,
+            "region": "NA",
+            "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
+            "display-tag": "FURIA"
+        },
+        {
+            "display-name": "KRÜ Esports",
+            "id": 120,
+            "region": "NA",
+            "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
+            "display-tag": "KRU"
+        },
+        {
+            "display-name": "Leviatán",
+            "id": 120,
+            "region": "NA",
+            "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
+            "display-tag": "LEV"
+        },
+        {
+            "display-name": "LOUD",
+            "id": 120,
+            "region": "NA",
+            "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
+            "display-tag": "LOUD"
+        },
+        {
+            "display-name": "MIBR",
+            "id": 120,
+            "region": "NA",
+            "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
+            "display-tag": "MIBR"
+        },
+        {
+            "display-name": "NRG Esports",
+            "id": 120,
+            "region": "NA",
+            "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
+            "display-tag": "NRG"
+        },
+        {
+            "display-name": "Sentinels",
+            "id": 120,
+            "region": "NA",
+            "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
+            "display-tag": "SEN"
+        },
+        {
+            "display-name": "G2 Esports",
+            "id": 120,
+            "region": "NA",
+            "vlr-url": "https://www.vlr.gg/team/120/100-thieves",
+            "display-tag": "G2"
+        }
+    ]
+
+}
