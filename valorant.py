@@ -55,6 +55,7 @@ def player_stats_from_id(id: int) -> dict:
 
     }
     """
+    pass
 
 
 def __scrape_all_data():
