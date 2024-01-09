@@ -14,9 +14,10 @@ Unofficial API for getting player, match and team information from the site vlr.
     "players": []
   },
   ...
-]```
+] ```
 
 ```/team/<id>/```
+
 ```{
     "display-name": "100 Thieves",
     "id": 120,
