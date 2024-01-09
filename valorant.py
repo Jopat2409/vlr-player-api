@@ -49,15 +49,26 @@ def __scrape_player_data(id: int, fromTimestamp: int = int((datetime.datetime.no
     __driver.find_elements(By.CLASS_NAME, "wf-nav-item")[1].click()
 
     current_match = 0
+    current_page = 0
     while(True):
         matches = __driver.find_element(By.CLASS_NAME, "mod-dark").find_elements(By.CLASS_NAME, 'wf-card')
+        if current_match >= len(matches):
+            current_page+=1
+            pages = __driver.find_elements(By.CLASS_NAME, 'mod-page')
+            if current_page >= len(pages): break
+            pages[current_page].click()
+            current_match = 0
+            continue
         matches[current_match].click()
 
+        # we stop looking at matches when they are earlier than the desired timestamp
         match_date = __driver.find_elements(By.CLASS_NAME, 'moment-tz-convert')[0].get_attribute('data-utc-ts')
         match_epoch = datetime.datetime.strptime(match_date, '%Y-%m-%d %H:%M:%S').timestamp()
         if match_epoch < fromTimestamp: break
-        # if match
+
         print(f"Found match: {__driver.find_element(By.CLASS_NAME, 'match-header-event-series').text} on {match_date}")
+
+        # parse match data
 
         __driver.back()
         current_match += 1
