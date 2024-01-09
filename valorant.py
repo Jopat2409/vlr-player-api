@@ -42,7 +42,8 @@ def players_from_team(id: int) -> list:
             "real-name": result.find(class_="team-roster-item-name-real").text.strip(),
             "team": tag,
             "team-id": team["id"],
-            "url": f"https://www.vlr.gg{result.find('a', href=True)['href']}"
+            "url": f"https://www.vlr.gg{result.find('a', href=True)['href']}",
+            "role": "igl" if result.find(title="Team Captain") else "coach" if result.find(class_="team-roster-item-name-role") else "player"
         })
 
     return return_results
@@ -51,8 +52,16 @@ def player_stats_from_id(id: int) -> dict:
     """
     {
         kills
+        deaths
         assists
-
+        rating
+        plants
+        defuses
+        3ks
+        4ks
+        aces
+        first-kills
+        first-deaths
     }
     """
     pass
