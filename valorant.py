@@ -12,7 +12,7 @@ def load_data():
 
 
 def get_teams() -> dict:
-    return STATIC_DAT["tier1"]
+    return STATIC_DAT["tier1"]["teams"]
 
 def team_from_id(id: int) -> dict:
     return next(team for team in get_teams() if int(team["id"]) == id)
@@ -35,6 +35,7 @@ def players_from_team(id: int) -> list:
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
     return_results = []
     results = soup.find_all("div", class_="team-roster-item")
+
     for result in results:
         return_results.append({
             "display-name": result.find(class_="team-roster-item-name-alias").text.strip(),
@@ -45,4 +46,31 @@ def players_from_team(id: int) -> list:
         })
 
     return return_results
+
+def player_stats_from_id(id: int) -> dict:
+    """
+    {
+        kills
+        assists
+
+    }
+    """
+    pass
+
+
+def __scrape_all_data():
+    print("Scraping team data for all VCT partnered teams")
+    load_data()
+    for i, team in enumerate(get_teams()):
+        STATIC_DAT["tier1"]["teams"][i].update({"players": players_from_team(int(team["id"]))})
+    with open("data.json", "w", encoding='utf-8') as f:
+        json.dump(STATIC_DAT, f, indent=2)
+
+
+if __name__ == "__main__":
+    _inp = int(input("1. Run Tests\n2. Re-scrape Data\n>>>"))
+    if _inp == 1:
+        pass
+    if _inp == 2:
+        __scrape_all_data()
 
