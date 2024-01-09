@@ -60,10 +60,8 @@ def player_stats_from_id(id: int) -> dict:
 def __scrape_all_data():
     print("Scraping team data for all VCT partnered teams")
     load_data()
-    to_save = []
-    for team in get_teams():
-        to_save += players_from_team(team["id"])
-    STATIC_DAT["tier1"].update({"players": to_save})
+    for i, team in enumerate(get_teams()):
+        STATIC_DAT["tier1"]["teams"][i].update({"players": players_from_team(int(team["id"]))})
     with open("data.json", "w", encoding='utf-8') as f:
         json.dump(STATIC_DAT, f, indent=2)
 
