@@ -15,7 +15,7 @@ Unofficial API for getting player, match and team information from the site vlr.
   },
   ...
 ] ```
-
+---
 ```/team/<id>/```
 
 ```{
