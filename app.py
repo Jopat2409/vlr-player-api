@@ -14,4 +14,4 @@ def get_team(id):
 
 @app.route('/player/<id>')
 def get_player(id):
-    return jsonify(valorant.player_stats_from_id(int(id)))
+    return jsonify(valorant.player_stats_from_id(int(id), 0))
