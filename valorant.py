@@ -169,7 +169,7 @@ def __scrape_player_data(id: int, fromTimestamp: int = int((datetime.datetime.no
     return return_matches
 
 
-def __scrape_players_from_team(id: int) -> list:
+def scrape_players_from_team(team) -> list:
     """ Returns in dictionary form
     [
     {
@@ -181,10 +181,7 @@ def __scrape_players_from_team(id: int) -> list:
     }
     ]
     """
-    team = team_from_id(id)
-    url, tag = team["vlr-url"], team["display-tag"]
-
-    soup = BeautifulSoup(requests.get(url).content, "html.parser")
+    soup = BeautifulSoup(requests.get(team.url()).content, "html.parser")
     return_results = []
     results = soup.find_all("div", class_="team-roster-item")
 
@@ -194,8 +191,8 @@ def __scrape_players_from_team(id: int) -> list:
         return_results.append({
             "display-name": result.find(class_="team-roster-item-name-alias").text.strip(),
             "real-name": result.find(class_="team-roster-item-name-real").text.strip(),
-            "team": tag,
-            "team-id": team["id"],
+            "team": team.display_tag,
+            "team-id": team.team_id,
             "player-id": player_id,
             "url": f"https://www.vlr.gg{player_url}",
             "role": "igl" if result.find(title="Team Captain") else "coach" if result.find(class_="team-roster-item-name-role") else "player"
