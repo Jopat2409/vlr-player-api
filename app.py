@@ -1,12 +1,12 @@
 from flask import Flask, jsonify, request
-import valorant
+import time
+import data
 
 app = Flask(__name__)
-valorant.init()
 
 @app.route('/teams')
 def get_teams():
-    return jsonify(valorant.get_teams())
+    return jsonify([t.to_dict() for t in data.vlr_db.all_teams()])
 
 @app.route('/team/<id>')
 def get_team(id):
@@ -14,4 +14,10 @@ def get_team(id):
 
 @app.route('/player/<id>')
 def get_player(id):
-    return jsonify(valorant.player_stats_from_id(int(id), 0))
+    return jsonify(data.vlr_db.get_player(id).to_dict())
+
+@app.route('/player/<id>/stats')
+def get_player_stats(id):
+    _from = request.args.get("from", 0, type=int)
+    _to = request.args.get("to", time.time(), type=int)
+    return jsonify(data.vlr_db.get_player_stats(id, _from, _to))
