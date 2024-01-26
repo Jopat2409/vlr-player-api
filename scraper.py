@@ -167,7 +167,7 @@ class Scraper:
             print("Potentially no statters")
             self.__driver.back()
             return return_stats
-        player_stats_tr = self.__driver.find_elements(By.XPATH, "//div[@data-game-id != 'all' and contains(@class,'vm-stats-game ')]//tr")
+        player_stats_tr = self.__driver.find_elements(By.XPATH, "//div[@data-game-id != 'all' and contains(@class,'vm-stats-game ')]//tr/td/div[contains(@class, 'stats-sq')]/../..")
         for i in range(19, len(player_stats_tr), 29):
             player_stats = player_stats_tr[i:i+10]
             game_no = int((i-19)/29)
